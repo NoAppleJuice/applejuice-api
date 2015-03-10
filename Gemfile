@@ -53,3 +53,10 @@ group :development, :test do
   gem 'pry'
 end
 
+group :production do
+  gem 'rack-cors' # VERY IMPORTANT FOR FRONTEND SANITY
+ 
+  gem 'rails_12factor'
+end
+
+ruby '2.1.5'
