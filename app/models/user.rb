@@ -4,8 +4,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, 
          :recoverable, :rememberable, :trackable, :validatable
 
+
   before_save :ensure_authentication_token
  
+  has_many :phone_numbers
+
   def ensure_authentication_token
     if authentication_token.blank?
       self.authentication_token = generate_authentication_token
