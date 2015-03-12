@@ -12,7 +12,7 @@ class NotificationsController < ApplicationController
   def notify
     @user.phone_numbers.each do |num|
     @client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token
-    message = @client.messages.create from: '4047248008', to: num.base, body: 'testing No apple sauce'
+    message = @client.messages.create from: '4047248008', to: '4044092634', body: 'testing No apple sauce'
   end
  end
 

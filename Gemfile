@@ -57,6 +57,8 @@ group :production do
   gem 'rack-cors' # VERY IMPORTANT FOR FRONTEND SANITY
  
   gem 'rails_12factor'
+
+  gem 'puma'
 end
 
 ruby '2.1.5'
