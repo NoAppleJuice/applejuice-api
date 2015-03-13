@@ -33,9 +33,12 @@ gem 'devise'
 # gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+#let me use side kick
+gem 'sidekiq'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+#use redis
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

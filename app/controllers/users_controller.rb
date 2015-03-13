@@ -8,8 +8,15 @@ class UsersController < ApplicationController
     render json: {:user => @user}
   end
 
-  def index
-  end
+
+
+def index
+end
+
+def email
+@mail = UserMailer.welcome(current_user)
+render json: {mail: @mail}
+end
 
 
 end

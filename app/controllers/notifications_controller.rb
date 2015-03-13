@@ -10,10 +10,12 @@ class NotificationsController < ApplicationController
 
 
   def notify
-    @user.phone_numbers.each do |num|
-    @client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token
-    message = @client.messages.create from: '4047248008', to: '4044092634', body: 'testing No apple sauce'
-  end
+    #@user.phone_numbers.each do |num|
+
+    NotesJob.perform_now
+
+
+  #end
  end
 
 # def verify
@@ -23,8 +25,9 @@ class NotificationsController < ApplicationController
 
   rescue_from ActionView::MissingTemplate do
     render json: {message: 'sent'}
-  end
-
+ 
+end
+  private
 def set_user
   @user = User.find(params[:id])
 end
