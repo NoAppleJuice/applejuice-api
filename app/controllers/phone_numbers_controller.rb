@@ -10,8 +10,7 @@ class PhoneNumbersController < ApplicationController
     @user = User.find(params[:id])
     @phonenumber = PhoneNumber.new(phone_params)
     @phonenumber.user_id = @user.id
-    binding.pry
-   if @phonenumber.save
+    if @phonenumber.save
       render json: {phonenumber: @phonenumber}
     else
       render json: {phonenumber: @phonenumber.errors}
