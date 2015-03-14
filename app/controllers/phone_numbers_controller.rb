@@ -7,9 +7,7 @@ class PhoneNumbersController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:id])
-    @phonenumber = PhoneNumber.new(phone_params)
-    @phonenumber.user_id = @user.id
+    @phonenumber = current_user.phone_numbers.build(phone_params)
     if @phonenumber.save
       render json: {phonenumber: @phonenumber}
     else
