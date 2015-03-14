@@ -50,6 +50,7 @@ Request
 ```
 Response
 
+```json
 {
     "phonenumber": {
         "id": 1,
@@ -59,3 +60,4 @@ Response
         "updated_at": "2015-03-14T00:15:18.459Z"
     }
 }
+```
