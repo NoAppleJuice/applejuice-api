@@ -43,11 +43,19 @@ Request
 ```json
 
 {
-    "phone":{
+    "phonenumber":{
     "base":123456789
   }
 }   
 ```
 Response
 
-
+{
+    "phonenumber": {
+        "id": 1,
+        "user_id": 13,
+        "base": "123456789",
+        "created_at": "2015-03-14T00:15:18.459Z",
+        "updated_at": "2015-03-14T00:15:18.459Z"
+    }
+}
