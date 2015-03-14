@@ -3,7 +3,7 @@ class PhoneNumbersController < ApplicationController
   before_action :set_user
 
   def show
-    render json {user: @user}
+    render json: {user: @user}
   end
 
   def create
