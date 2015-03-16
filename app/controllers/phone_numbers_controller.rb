@@ -8,7 +8,6 @@ class PhoneNumbersController < ApplicationController
 
   def create
     @phonenumber = current_user.phone_numbers.build(phone_params)
-    binding.pry
    if @phonenumber.save
       render json: {phonenumber: @phonenumber}
     else
