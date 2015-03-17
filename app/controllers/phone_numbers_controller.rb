@@ -16,7 +16,7 @@ class PhoneNumbersController < ApplicationController
 end
 
 def phone_params
-params.require(:phonenumber).permit(:base)
+params.require(:phonenumber).permit(:base, :msg)
 end
 
 def set_user
