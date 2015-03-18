@@ -45,6 +45,7 @@ Request
 {
     "phonenumber":{
     "base":123456789
+    "msg": Hello mr my phone is about to die man.
   }
 }   
 ```
@@ -58,6 +59,7 @@ Response
         "base": "123456789",
         "created_at": "2015-03-14T00:15:18.459Z",
         "updated_at": "2015-03-14T00:15:18.459Z"
+        "msg": "Hello mr my phone is about to die man."
     }
 }
 ```
