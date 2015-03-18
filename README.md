@@ -63,3 +63,8 @@ Response
     }
 }
 ```
+<h2> Send a Notifcation </h2>
+
+<strong> POST </strong> https://pure-inlet-8534.herokuapp.com/users/:user_id/notifications/notify
+
+<h1> NOTE for creating a phone number and notifications you must pass an auth_token in the headers </h1>
