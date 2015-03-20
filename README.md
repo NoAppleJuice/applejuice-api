@@ -35,36 +35,20 @@ Response
 Status 202
 ```
 
-<h2> Add a phone number to a user </h2>
 
-<strong>Post</strong> https://pure-inlet-8534.herokuapp.com/users/:user_id/phonenumbers
-
-Request
-```json
-
-{
-    "phonenumber":{
-    "base":123456789
-    "msg": Hello mr my phone is about to die man.
-  }
-}   
-```
-Response
-
-```json
-{
-    "phonenumber": {
-        "id": 1,
-        "user_id": 13,
-        "base": "123456789",
-        "created_at": "2015-03-14T00:15:18.459Z",
-        "updated_at": "2015-03-14T00:15:18.459Z"
-        "msg": "Hello mr my phone is about to die man."
-    }
-}
-```
 <h2> Send a Notifcation </h2>
 
 <strong> POST </strong> https://pure-inlet-8534.herokuapp.com/users/:user_id/notifications/notify
 
-<h1> NOTE for creating a phone number and notifications you must pass an auth_token in the headers </h1>
+Request
+
+```json
+{
+   "notification": {
+   message: Hey there bud
+   number: +17708130466
+  }
+}
+```
+
+ <strong> NOTE </strong> for creating notifications you must pass an auth_token in the headers
