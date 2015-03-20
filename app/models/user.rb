@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
  
   has_many :phone_numbers
   has_many :notifications
+  has_many :statuses
 
   def ensure_authentication_token
     if authentication_token.blank?

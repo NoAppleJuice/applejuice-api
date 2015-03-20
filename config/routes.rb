@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post 'users/:id/phonenumbers/' => 'phone_numbers#create'                                     
   post 'twilio/voice' => 'twilio#voice'
   post 'users/:id/notifications/notify' => 'notifications#notify'
-
+  post 'getstatus' => 'statuses#givestatus'
   
   resources :users
 
