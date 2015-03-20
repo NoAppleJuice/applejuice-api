@@ -1,4 +1,3 @@
-<h1>No Apple Juice</h1>
 
 <strong>Base URLI: https://pure-inlet-8534.herokuapp.com</stong>
 
@@ -51,4 +50,19 @@ Request
 }
 ```
 
- <strong> NOTE </strong> for creating notifications you must pass an auth_token in the headers
+<h2> Create a Status </h2>
+<strong> POST </strong> https://pure-inlet-8534.herokuapp.com/getstatus
+
+Request
+```json
+{
+  "status": {
+  "charging": false
+  "level": 50
+  "lat": 40.689060
+  "lng": 74.044636
+  }
+
+}
+```
+ <strong> NOTE </strong> for creating notifications and statuses you must pass an auth_token in the headers
