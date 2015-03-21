@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post 'twilio/voice' => 'twilio#voice'
   post 'users/:id/notifications/notify' => 'notifications#notify'
   post 'getstatus' => 'statuses#givestatus'
-  
+  get 'users/:id/email' => 'users#email'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

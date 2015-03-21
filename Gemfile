@@ -33,6 +33,10 @@ gem 'devise'
 # gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
 # gem 'unicorn'
+# Can't use sidekick
+gem 'sucker_punch'
+
+gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
