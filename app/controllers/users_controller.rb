@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def email
     @user = User.all
     @user.each do |user|
-    @mail = UserMailer.welcome(user).deliver_now
+    LoggerJob.new.async.perform(user)
     end
       render json: {user: @user}
   end
