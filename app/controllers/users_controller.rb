@@ -7,9 +7,11 @@ class UsersController < ApplicationController
   end
 
   def email
-    @user = current_user
-    @mail = UserMailer.welcome(current_user).deliver_now
-    render json: {mail: @user}
+    @user = User.all
+    @user.each do |user|
+    @mail = UserMailer.welcome(user).deliver_now
+    end
+      render json: {user: @user}
   end
 
 end
