@@ -10,10 +10,7 @@ class NotificationsController < ApplicationController
 
 
 def notify
- @notification = current_user.notifications.build(notification_params)
-  if @notification.save
-  @notification.go
-  end
+  NotificationJob.new.perform(@user.id,notification_params)
 end
 
 # def verify
@@ -25,7 +22,7 @@ end
   end
 
 def set_user
-  @user = User.find(params[:id])
+  @user = current_user
 end
 
 def notification_params
